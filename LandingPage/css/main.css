@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+nav {
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbarList li {
+  list-style-type: none;
+  display: inline;
+}
+
+.navbarList li a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.navbarList li .getNowBtn {
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+}
+main {
+  background-color: lightgrey;
+  min-height: 90vh;
+}
+#title {
+  width: 60%;
+  text-align: center;
+  margin: 0 auto;
+  padding: 10vh;
+}
+#title h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+#title p {
+  font-size: 1.5rem;
+}
+/* card css start*/
+.parent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+  padding: 50px 70px;
+}
+.parent a {
+  text-decoration: none;
+}
+.parent .myCard {
+  min-height: 200px;
+  width: 100%;
+  cursor: pointer;
+}
+.parent .myCard:hover {
+  transform: scale(1.05);
+}
+.parent .myCard img {
+  width: 100%;
+  border-radius: 15x;
+  margin-bottom: 2vh;
+}
+.parent .myCard span {
+  color: orangered;
+  font-weight: 600;
+}
+.parent .myCard p {
+  font-size: 24px;
+  margin-top: 2vh;
+  font-weight: 600;
+  color: black;
+}
+/* card css end*/
+
+/* footer css start*/
+.myContainer {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 0px 20px;
+  grid-auto-flow: row;
+  padding: 4em 6em;
+}
+.info {
+  margin: auto;
+}
+
+.info blockquote {
+  color: gray;
+  line-height: 1.5;
+  width: 80%;
+  margin-bottom: 1.5em;
+}
+.info a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.3em;
+  margin: 0 10px;
+}
+.footerList ul {
+  list-style-type: none;
+  margin: auto;
+}
+.footerList ul .listHeader {
+  color: gray;
+  margin-bottom: 3vh;
+}
+.footerList ul li {
+  margin-bottom: 1.5vh;
+  color: black;
+  font-weight: 600;
+}
+.footerList ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+/* footer css end*/
+
+/* modal start*/
+.myModal {
+  width: 40%;
+  min-height: 60vh;
+  position: fixed;
+  top: 10vh;
+  left: 30%;
+  background-color: white;
+  border-radius: 15px;
+  display: none;
+}
+
+.myModal img {
+  width: 100%;
+}
+
+.myModal h2 {
+  text-align: center;
+  margin: 0.5em 0;
+}
+
+.myModal span {
+  display: inline-block;
+  margin: 0.5em 10%;
+  color: orangered;
+}
+.myModal p {
+  text-align: justify;
+  width: 80%;
+  margin: 0.5em auto;
+}
+.myModal button {
+  display: block;
+  width: 30%;
+  margin: 1em auto;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border-color: blue;
+  z-index: 0;
+}
+.myModal button:hover {
+  background-color: blue;
+  cursor: pointer;
+  border-color: blue;
+  color: white;
+}
+.myModal .closeBtn {
+  position: absolute;
+  top: 5px;
+  right: -20px;
+  font-size: 22px;
+}
+.myModal .closeBtn:hover {
+  color: blue;
+  cursor: pointer;
+}
+.fadeBackground {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: gray;
+}
+/* modal end*/
+
+/* tablet view*/
+@media only screen and (max-width: 960px) {
+  .parent {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .myContainer {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 40px;
+  }
+  .info {
+    text-align: center;
+  }
+  .info blockquote {
+    width: 100%;
+  }
+}
+
+/* mobile view*/
+@media only screen and (max-width: 720px) {
+  .parent {
+    grid-template-columns: 1fr;
+  }
+  .myContainer {
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+  }
+}
